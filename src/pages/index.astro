@@ -1,14 +1,16 @@
 ---
 import "@fontsource/inter/variable.css";
+import astronaut from '~/assets/astronaut.png';
 import Compatibility from "~/components/compatibility.astro";
+import ContentSection from "~/components/content-section.astro";
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
+import ShowcaseCard from "~/components/showcase-card.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
-import Jenn from 'src/assets/jennjunodportrait.png';
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -69,6 +71,19 @@ const description =
       <Features />
       <Compatibility />
       <Showcase />
+
+      <ContentSection title="Code" id="code">
+        <Fragment slot="lead">
+          <span class="text-primary">Creative</span>.{" "}
+          <span class="text-primary">Inclusive</span>. {" "}
+          <span class="text-primary">Open</span>.
+        </Fragment>
+        <div class="max-w-6xl space-y-2">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ShowcaseCard site={{title:'site 1',image:astronaut,url:'https://google.com'}} />
+          </div>
+        </div>
+      </ContentSection>
     </div>
     <Footer />
   </body>

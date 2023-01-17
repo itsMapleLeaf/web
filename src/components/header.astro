@@ -1,5 +1,7 @@
 ---
+import { Image } from '@astrojs/image/components';
 import { Icon } from "astro-icon";
+import jenn from '~/assets/jennjunodportrait.jpeg';
 
 // import { image } from "src/assets/jennjunodportrait.png";
 // import Jenn from 'src/assets/jennjunodportrait.png';
@@ -20,8 +22,9 @@ const navItems: Array<NavItem> = [
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Teach Jenn Tech</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <Image src={jenn} class="w-16 object-contain" />
+    <!-- <Icon name="logomark" class="h-10" />
+    <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
   <div>
     <div class="flex items-center gap-6">

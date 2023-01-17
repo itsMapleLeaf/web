@@ -1,11 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
+import portrait from '~/assets/jennjunodportrait.jpeg';
 import ContentSection from "~/components/content-section.astro";
 ---
 
 <ContentSection title="Jenn Junod" id="intro">
   
-  <png slot="eyebrow" name="logomark" class="h-32" />
+  <Image slot="eyebrow" src={portrait} name="logomark" class="h-32 object-contain" />
   <Fragment slot="lead">
     <!-- As someone who thrives on 
     <span class="text-primary"> human connection</span>, I 
